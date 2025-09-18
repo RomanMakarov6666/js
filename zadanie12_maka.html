@@ -1,0 +1,27 @@
+<html> 
+         <body> 
+          <div style="color:green;font-size:36px;"> 
+            <script language="JavaScript"> 
+// Raman Makarau  2P   11.09.2025 
+// Zadanie 11  
+              var D1_mak=prompt("Data1=","");
+               var G1_mak=prompt("G1=",""); 
+              var D2_mak=prompt("Data2=",""); 
+              
+              var G2_mak=prompt("G2=",""); 
+              var sekund; 
+              var a=parseFloat(D1_mak); 
+              var b=parseFloat(D2_mak); 
+              var c=parseFloat(G1_mak); 
+              var d=parseFloat(G2_mak); 
+                sekund=(a-b)*24*60*60 + (c-d)*60*60; 
+              document.write("Ilość sekund między dniami "+a+", "+c+"g i "+b+", "+d+"g = "+sekund+"<br>"); 
+                function okno_zamknij_maka() 
+                 { 
+                   window.close() 
+                 } 
+              </script> 
+            </div> 
+          <input type="button" value="zamknij okno" onclick="okno_zamknij_maka()"/> 
+        </body> 
+       </html> 

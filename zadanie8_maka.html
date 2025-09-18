@@ -1,0 +1,21 @@
+<!DOCTYPE html>    
+<head>  
+<script type="text/javascript">  
+   function show_confirm()   
+       {  
+         var r=confirm("Nacisnij klawisz");  
+           if (r==true)   
+                {  document.write("Nacisnales OK!");  }  
+           else   
+             {  document.write("Nacisnales Cancel!");  }  
+      }  
+</script>  
+</head>  
+ <body> 
+    <p><b>Zastosowanie: </b> <br>
+Jest używany, jeśli chcemy zapytać użytkownika o weryfikacje, lub akceptację jakichś danych. <br>
+Użytkownik musi nacisnąć  „OK.” w celu akceptacji bądź „Cancel” w celu odrzucenia. Jeżeli zostanie <br>
+wybrane „OK.” metoda zwraca true w przeciwnym wypadku false.  </p>
+     <input type="button" onclick="show_confirm()" value="Pokaz confirm box" />   
+ </body>  
+</html>   
