@@ -1,0 +1,56 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+        <html> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="styl.css"> 
+ </head> 
+<body> 
+ <script type="text/javascript"> 
+  function BC_mak() 
+   { 
+ var c_x= parseFloat(document.getElementById('C_x').value); 
+ var c_y= parseFloat(document.getElementById('C_y').value); 
+ var b_x= parseFloat(document.getElementById('B_x').value); 
+ var b_y= parseFloat(document.getElementById('B_y').value); 
+
+ var wynik= Math.sqrt(Math.pow(b_x-c_x, 2) + Math.pow(b_y-c_y, 2)); 
+        document.getElementById("nazwa").innerHTML ="BC= "+wynik.toFixed(2);  
+   } 
+  function AB_mak() 
+   { 
+var a_x= parseFloat(document.getElementById('A_x').value); 
+ var a_y= parseFloat(document.getElementById('A_y').value); 
+ var b_x= parseFloat(document.getElementById('B_x').value); 
+ var b_y= parseFloat(document.getElementById('B_y').value); 
+
+ var wynik= Math.sqrt(Math.pow(b_x-a_x, 2) + Math.pow(b_y-a_y, 2)); 
+        document.getElementById("nazwa").innerHTML ="AB= "+wynik.toFixed(2);  
+   } 
+   function AC_mak() 
+   { 
+ var c_x= parseFloat(document.getElementById('C_x').value); 
+ var c_y= parseFloat(document.getElementById('C_y').value); 
+ var a_x= parseFloat(document.getElementById('A_x').value); 
+ var a_y= parseFloat(document.getElementById('A_y').value); 
+
+ var wynik= Math.sqrt(Math.pow(a_x-c_x, 2) + Math.pow(a_y-c_y, 2)); 
+        document.getElementById("nazwa").innerHTML ="AC= "+wynik.toFixed(2);  
+          
+   } 
+ </script> 
+  <h1>Wszystko o TROJKACIE</h1><br><br> 
+  Podaj A x i y: <input type="text" id="A_x" value="1"> <input type="text" id="A_y" value="2"><br><br><br> 
+  Podaj B x i y: <input type="text" id="B_x" value="10"> <input type="text" id="B_y" value="10"><br><br><br> 
+  Podaj C x i y: <input type="text" id="C_x" value="11"> <input type="text" id="C_y" value="0"><br><br><br> 
+  
+  <input style="float: left;" type="button" name="pole" value="Oblicz AB" Onclick="AB_mak()"><br><br> <div  style="color:red;font-size:50px;float: left;"id="nazwa"></div> 
+  <input type="button" name="obwod" value="Oblicz BC" Onclick="BC_mak()"><br><br> 
+  <input type="button" name="obwod" value="Oblicz AC" Onclick="AC_mak()"><br><br> 
+  
+</body> 
+</html>
+      </textarea> 
+    </body> 
+</html> 
