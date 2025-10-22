@@ -1,0 +1,39 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+        <html> 
+         <body> 
+          <div style="color: navy;"> 
+
+            <script language="JavaScript"> 
+
+              var x1_mak=prompt("x1=","");
+               var x2_mak=prompt("x2=","");
+               
+              
+              var x1=parseFloat(x1_mak);
+              var x2=parseFloat(x2_mak); 
+
+              let y1 = 3*Math.pow(x1, 5/7);
+              let y2 = (2*Math.cos(x1*Math.PI/180)) + (3 * Math.sin(x1*Math.PI/180));
+              let y3 = Math.cbrt(Math.pow(x1, 5) + 2*Math.pow(x2, 4)) * Math.abs(x1-x2);
+              
+              document.write("x1 = "+ x1 + "&nbsp&nbsp&nbsp&nbsp&nbsp" + "x2 = " + x2 + "<br>");
+              document.write("x1 = "+ x1 + " stopniow&nbsp&nbsp&nbsp&nbsp&nbsp" + "x1 = " + (x1*Math.PI/180).toFixed(2) + " radianow<br>");
+              document.write("y1 = " + y1.toFixed(2) + "<br>");
+              document.write("y2 = " + y2.toFixed(2) + "<br>");
+              document.write("y3 = " + y3.toFixed(2) + "<br>");
+              
+                function okno_zamknij_maka() 
+                 { 
+                   window.close() 
+                 } 
+              </script> 
+            </div> 
+          <input type="button" value="zamknij okno" onclick="okno_zamknij_maka()"/> 
+
+        </body> 
+       </html> 
+      </textarea> 
+    </body> 
+</html> 

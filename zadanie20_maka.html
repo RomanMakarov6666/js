@@ -5,6 +5,22 @@
  </head> 
 <body> 
  <script type="text/javascript"> 
+ var a_x=prompt("A_x=","");
+  var a_y=prompt("A_y=","");
+  var b_x=prompt("B_x=","");
+  var b_y=prompt("B_y=","");
+  var c_x=prompt("C_x=","");
+  var c_y=prompt("C_y=","");
+
+               
+              document.getElementById('A_x').value=a_x.toFixed(2); 
+              document.getElementById('A_y').value=a_y.toFixed(2); 
+              document.getElementById('B_x').value=b_x.toFixed(2); 
+              document.getElementById('B_y').value=b_y.toFixed(2); 
+              document.getElementById('C_x').value=c_x.toFixed(2); 
+              document.getElementById('C_y').value=c_y.toFixed(2); 
+              var a=parseFloat(a_mak);
+              var b=parseFloat(b_mak); 
   function BC_mak() 
    { 
  var c_x= parseFloat(document.getElementById('C_x').value); 
@@ -38,13 +54,13 @@ var a_x= parseFloat(document.getElementById('A_x').value);
    } 
  </script> 
   <h1>Wszystko o TROJKACIE</h1><br><br> 
-  Podaj A x i y: <input type="text" id="A_x" value="1"> <input type="text" id="A_y" value="2"><br><br><br> 
+  Podaj A x i y: <input type="text" id="A_x" value="0"> <input type="text" id="A_y" value="2"><br><br><br> 
   Podaj B x i y: <input type="text" id="B_x" value="10"> <input type="text" id="B_y" value="10"><br><br><br> 
   Podaj C x i y: <input type="text" id="C_x" value="11"> <input type="text" id="C_y" value="0"><br><br><br> 
-  
+  <form action="">
   <input style="float: left;" type="button" name="pole" value="Oblicz AB" Onclick="AB_mak()"><br><br> <div  style="color:red;font-size:50px;float: left;"id="nazwa"></div> 
   <input type="button" name="obwod" value="Oblicz BC" Onclick="BC_mak()"><br><br> 
   <input type="button" name="obwod" value="Oblicz AC" Onclick="AC_mak()"><br><br> 
-  
+  </form>
 </body> 
 </html>

@@ -1,0 +1,62 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+        <html>  
+<head>  
+<title> 
+Przykład obliczenia h  i  kata
+</title> 
+<script language="JavaScript"> 
+function h_makarau(odl,s) 
+{ 
+a=parseFloat(odl);
+c=parseFloat(s);
+h = Math.sqrt(c*c - a*a);
+document.getElementsByName('h')[0].value=h.toFixed(2);   /* na dokument  */ 
+alert("h="+h.toFixed(2)+" km");                                                  
+wyprowadz_h_mak.innerHTML="h="+h.toFixed(2)+" km"+"<br>";        
+
+ } 
+function kat_makarau(odl,s) 
+{ 
+    a=parseFloat(odl);
+    c=parseFloat(s);
+   var sinA = Math.sqrt(c*c - a*a)/c;
+   var aRad = Math.asin(sinA);
+    var aDeg = aRad * (180/Math.PI);
+   alert("kat="+aDeg.toFixed(2)+" stopniow"); 
+   document.getElementsByName('kat')[0].value=aDeg.toFixed(2); 
+   
+   wyprowadz_kat_mak.innerHTML="kat="+aDeg.toFixed(2)+"stopniow"; 
+       
+
+} 
+       </script> 
+</head>  
+<body>  
+ Pobliczanie wysoty   i    kat 
+<br> <br> 
+<form name="formularz" action="..." onsubmit="h_makarau(this.a_dana_mak.value,this.b_dana_mak.value); 
+kat_makarau(this.a_dana_mak.value,this.b_dana_mak.value);return false"> 
+
+     Podaj odleglosc= 
+        <input  size="6"  name="a_dana_mak"> 
+     Podaj s= 
+        <input  size="6"  name="b_dana_mak"> 
+                       <br>   <br> 
+         <input  TYPE="submit"  Value="oblicz" > 
+                       <br>   <br> 
+       h= 
+           <input  size="6"  name="h"> 
+       kat= 
+          <input  size="6"  name="kat"> 
+</form> 
+<table> 
+              <tr id="wyprowadz_h_mak"></tr> 
+              <tr id="wyprowadz_kat_mak"></tr> 
+</table> 
+</body>  
+</html> 
+      </textarea> 
+    </body> 
+</html> 

@@ -1,0 +1,39 @@
+<html> 
+         <body> 
+          <div style="color: navy;"> 
+
+            <script language="JavaScript"> 
+
+            var A=prompt("A=","");
+            var C=prompt("C=","");
+            var H=prompt("H=","");
+               
+              
+              var a=parseFloat(A);
+              var c=parseFloat(C);
+              var h = parseFloat(H);
+               
+              var p = pole(a, c, h).toFixed(2);
+              var o = obw(a, c, h).toFixed(2);
+
+              document.write("Pole = "+ p + "[cm2]<br>");
+              document.write("Obwod = "+ o + "[cm2]<br>");
+              
+              
+              
+              function pole(a, c, h){
+                return (a+c)*h/2;
+              }
+              function obw(a, c, h){
+                return Math.sqrt(Math.pow(Math.abs((a-c)/2), 2) + Math.pow(h, 2))*2+a+c;
+              }
+                function okno_zamknij_maka() 
+                 { 
+                   window.close() 
+                 } 
+              </script> 
+            </div> 
+          <input type="button" value="zamknij okno" onclick="okno_zamknij_maka()"/> 
+
+        </body> 
+       </html> 

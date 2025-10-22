@@ -1,0 +1,34 @@
+<html> 
+         <body> 
+          <div style="color: navy;"> 
+
+            <script language="JavaScript"> 
+
+            var No=prompt("No    =","");
+            var T=prompt("t=","");
+            var T12=prompt("t1/2=","");
+               
+              
+              var n0=parseFloat(No);
+              var t=parseFloat(T);
+              var t12 = parseFloat(T12);
+               
+              var y = (Math.log(2)/t12);
+              var n = n0 * Math.pow(Math.E, -1 * y * t)
+              document.write("N0 = "+ n0 + "[sztuk]<br>");
+              document.write("t = "+ t + "[lat]<br>");
+              document.write("T1/2 = "+ t12 + "[lat]<br>");
+              document.write("Lambda = "+ y + "[1/rok]<br>");
+              document.write("N = "+ n + "[sztuk]<br>");
+              
+              
+                function okno_zamknij_maka() 
+                 { 
+                   window.close() 
+                 } 
+              </script> 
+            </div> 
+          <input type="button" value="zamknij okno" onclick="okno_zamknij_maka()"/> 
+
+        </body> 
+       </html> 

@@ -1,0 +1,54 @@
+<html>  
+<head>  
+<title> 
+Przykład obliczenia Pola  i  Obwod 
+</title> 
+<script language="JavaScript"> 
+function pole_makarau(r,h) 
+{ 
+a=parseFloat(r);
+b=parseFloat(h);
+res_pol=a*b;
+document.getElementsByName('pole')[0].value=res_pol.toFixed(2);   /* na dokument  */ 
+alert("Pole="+res_pol.toFixed(2)+" cm^2");                                                  
+wyprowadz_pole_mak.innerHTML="Pole="+res_pol.toFixed(2)+" cm^2"+"<br>";        
+
+ } 
+function odwod_makarau(r,h) 
+{ 
+    a=parseFloat(r);
+    b=parseFloat(h);
+   res_obw = 2*(a+b);
+   alert("Obwod="+res_obw.toFixed(2)+" cm^2"); 
+   document.getElementsByName('obw')[0].value=res_obw.toFixed(2); 
+   
+   wyprowadz_obwod_mak.innerHTML="Obwod="+res_obw.toFixed(2)+"cm^2"; 
+       
+
+} 
+       </script> 
+</head>  
+<body>  
+ Pobliczanie Pola   i    Obwod 
+<br> <br> 
+<form name="formularz" action="..." onsubmit="pole_makarau(this.a_dana_mak.value,this.b_dana_mak.value); 
+odwod_makarau(this.a_dana_mak.value,this.b_dana_mak.value);return false"> 
+
+     Podaj a= 
+        <input  size="6"  name="a_dana_mak"> 
+     Podaj b= 
+        <input  size="6"  name="b_dana_mak"> 
+                       <br>   <br> 
+         <input  TYPE="submit"  Value="oblicz" > 
+                       <br>   <br> 
+       Pole= 
+           <input  size="6"  name="pole"> 
+       Obwod= 
+          <input  size="6"  name="obw"> 
+</form> 
+<table> 
+              <tr id="wyprowadz_pole_mak"></tr> 
+              <tr id="wyprowadz_obwod_mak"></tr> 
+</table> 
+</body>  
+</html> 

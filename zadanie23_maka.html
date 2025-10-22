@@ -1,0 +1,54 @@
+<html>  
+<head>  
+<title> 
+Przykład obliczenia Drabine  i  Alfa 
+</title> 
+<script language="JavaScript"> 
+function drabina_makarau(r,h) 
+{ 
+a=parseFloat(r);
+b=parseFloat(h);
+res_pol=Math.sqrt(a*a+b*b);
+document.getElementsByName('drabina')[0].value=res_pol.toFixed(2);   /* na dokument  */ 
+alert("Drabina="+res_pol.toFixed(2)+" cm");                                                  
+wyprowadz_drabine_mak.innerHTML="Drabina="+res_pol.toFixed(2)+" cm"+"<br>";        
+
+ } 
+function alfa_makarau(r,h) 
+{ 
+    a=parseFloat(r);
+    b=parseFloat(h);
+   alfa = (Math.atan(a/b)*180/Math.PI);
+   alert("Alfa="+alfa.toFixed(2)+" degrees"); 
+   document.getElementsByName('alfa')[0].value=alfa.toFixed(2); 
+   
+   wyprowadz_alfa_mak.innerHTML="Alfa="+alfa.toFixed(2)+" degrees, " + Math.atan(a/b).toFixed(2) + " radians"; 
+       
+
+} 
+       </script> 
+</head>  
+<body>  
+ Pobliczanie Drabine   i    Alfa 
+<br> <br> 
+<form name="formularz" action="..." onsubmit="drabina_makarau(this.a_dana_mak.value,this.b_dana_mak.value); 
+alfa_makarau(this.a_dana_mak.value,this.b_dana_mak.value);return false"> 
+
+     Podaj a= 
+        <input  size="6"  name="a_dana_mak"> 
+     Podaj b= 
+        <input  size="6"  name="b_dana_mak"> 
+                       <br>   <br> 
+         <input  TYPE="submit"  Value="oblicz" > 
+                       <br>   <br> 
+       Drabina= 
+           <input  size="6"  name="drabina"> 
+       Alfa= 
+          <input  size="6"  name="alfa"> 
+</form> 
+<table> 
+              <tr id="wyprowadz_drabine_mak"></tr> 
+              <tr id="wyprowadz_alfa_mak"></tr> 
+</table> 
+</body>  
+</html> 
