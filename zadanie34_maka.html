@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 34</title>
+<style>
+    body { font-family: Arial; }
+    li {
+        list-style: none;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #000;
+        width: 250px;
+    }
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+</style>
+</head>
+<body>
+
+<h1>Zadanie 34 – Raman Makarau</h1>
+
+<ul id="userList"></ul>
+
+<script>
+function User(email, password, avatarUrl) {
+    this.email = email;
+    this.password = password;
+    this.avatarUrl = avatarUrl;
+}
+
+// 1) Konstruktor UserView
+function UserView(user) {
+    this.user = user;
+
+    // utwórz element li
+    const li = document.createElement("li");
+
+    // avatar
+    const img = document.createElement("img");
+    img.src = user.avatarUrl;
+
+    // link mailto
+    const link = document.createElement("a");
+    link.href = "mailto:" + user.email;
+    link.innerText = user.email;
+
+    // składanie
+    li.appendChild(img);
+    li.appendChild(link);
+
+    this.dom = li;
+}
+
+UserView.prototype.refresh = function() {
+    const img = this.dom.querySelector("img");
+    const link = this.dom.querySelector("a");
+
+    img.src = this.user.avatarUrl;
+    link.href = "mailto:" + this.user.email;
+    link.innerText = this.user.email;
+};
+
+const u1 = new User("raman@example.com", "abcd", "avatar1.png");
+
+const view1 = new UserView(u1);
+
+document.getElementById("userList").appendChild(view1.dom);
+
+setTimeout(function(){
+    u1.email = "nowy_email@example.com";
+    u1.avatarUrl = "avatar2.png";
+    view1.refresh();
+}, 3000);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 32</title>
+    <script type="text/javascript">
+        // Konstruktor
+        function Klient(nazwisko, imie, zawod, wiek) {
+            this.nazwisko = nazwisko;
+            this.imie = imie;
+            this.zawod = zawod;
+            this.wiek = wiek;
+        }
+
+        // Metoda w prototypie
+        Klient.prototype.wypisz = function() {
+            return this.nazwisko + " " + this.imie + " " + this.zawod + " " + this.wiek;
+        };
+
+        // Tworzymy 3 obiekty
+        var osoba1 = new Klient("Kowalski", "Jan", "kierowca", 30);
+        var osoba2 = new Klient("Nowak", "Anna", "sekretarka", 25);
+        var osoba3 = new Klient("Wiśniewski", "Piotr", "programista", 28);
+
+        // Dostęp do właściwości
+        function pokazDane() {
+            alert(
+                osoba1.wypisz() + "\n" +
+                osoba2.wypisz() + "\n" +
+                osoba3.wypisz()
+            );
+        }
+
+        osoba1.narodowosc = "Polska";
+
+        // Dodana metoda poza konstruktorem
+        osoba1.pokaz_narodowosc = function() {
+            alert("Narodowość: " + this.narodowosc);
+        };
+    </script>
+</head>
+<body style="background-color: #f0f0f0; font-family: Arial, sans-serif;">
+    <h1>Zadanie 32 - Programowanie obiektowe</h1>
+    <p>W tym zadaniu tworzymy konstruktor, obiekty i metody w stylu prototypowym.</p>
+
+    <input type="button" value="Pokaż dane wszystkich obiektów" onclick="pokazDane()">
+    <br><br>
+    <input type="button" value="Pokaż narodowość osoby1" onclick="osoba1.pokaz_narodowosc()">
+</body>
+</html>
+
+      </textarea> 
+    </body> 
+</html> 

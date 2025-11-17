@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 29</title>
+<style>body{font-family:Arial,Helvetica,sans-serif;margin:18px;color:#111}h1{font-size:32px}pre{background:#f3f3f3;padding:8px;border-radius:6px}</style>
+</head>
+<body>
+  <h1>ZADANIE 29 — Pytania</h1>
+  <ol>
+    <li>W jaki sposób można określić właściwość danego obiektu (dwa sposoby z przykładami)?</li>
+    <li>W jaki sposób można odwołać się do pól (właściwości) i metod?</li>
+    <li>Wymień cechy charakterystyczne konstruktora.</li>
+    <li>Konstruowanie obiektu na podstawie przykładu — obiekt ma trzy pola oraz jedną metodę.</li>
+    <li>Znaczenie słowa this. Jak oddzielamy pola oraz metody?</li>
+    <li>Konstruktor w JS — przykład z opisem.</li>
+    <li>Znaczenie słowa kluczowego new + przykład.</li>
+    <li>Znaczenie słowa kluczowego prototype + przykład (ważny tekst pogrubiony).</li>
+  </ol>
+
+  <h1>ODPOWIEDZI</h1>
+
+  <h2>1. Dwa sposoby nadania właściwości</h2>
+  <pre>
+// Sposób 1: kropkowy
+obj.marka = "Opel";
+
+// Sposób 2: indeksowy
+obj["cena"] = 25000;
+  </pre>
+
+  <h2>2. Odwołanie do pól i metod</h2>
+  <pre>
+console.log(osoba.imie);
+osoba.pokaz();
+  </pre>
+
+  <h2>3. Cechy konstruktora</h2>
+  <ul>
+    <li>Wywoływany przy tworzeniu obiektu.</li>
+    <li>Nazywa się jak klasa (w JS to funkcja).</li>
+    <li>Nie zwraca wartości.</li>
+    <li>Może przyjmować argumenty.</li>
+  </ul>
+
+  <h2>4. Przykład obiektu z 3 polami i 1 metodą</h2>
+  <pre>
+var osoba = {
+  nazwisko: "Kowalski",
+  imie: "Jan",
+  zawod: "piekarz",
+  wyswietl: function(){ document.write(this.nazwisko + " " + this.imie); }
+};
+  </pre>
+
+  <h2>5. Znaczenie this</h2>
+  <p><code>this</code> wskazuje na aktualny obiekt, pozwala wewnątrz metody odnieść się do pól/metod tego obiektu.</p>
+
+  <h2>6. Konstruktor w JS — przykład</h2>
+  <pre>
+function Klient(nazwisko, imie, zawod){
+  this.nazwisko = nazwisko;
+  this.imie = imie;
+  this.zawod = zawod;
+  this.wypisz = function(){ alert(this.nazwisko + " " + this.imie); };
+}
+  </pre>
+
+  <h2>7. Słowo kluczowe new</h2>
+  <pre>
+var k = new Klient("Kowalski","Jan","kierowca");
+  </pre>
+
+  <h2>8. Właściwość <strong>prototype</strong> — przykład</h2>
+  <pre>
+function Klient(){ this.imie = "Paweł"; }
+Klient.prototype.pisz = function(){ console.log(this.imie); };
+var x = new Klient();
+x.pisz();
+  </pre>
+
+</body>
+</html>

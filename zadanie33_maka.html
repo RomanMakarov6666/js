@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 33</title>
+<style>
+    body { font-family: Arial; }
+    .box { width: 300px; padding: 15px; border: 1px solid #000; }
+</style>
+</head>
+<body>
+
+<h1>Zadanie 33 – Raman Makarau</h1>
+
+<div class="box">
+    <h3>Logowanie</h3>
+    <form id="loginForm">
+        <label>Email:</label><br>
+        <input type="text" id="email"><br><br>
+
+        <label>Hasło:</label><br>
+        <input type="password" id="password"><br><br>
+
+        <input type="submit" value="Zaloguj">
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function User(email, password, avatarUrl) {
+    this.email = email;
+    this.password = password;
+    this.avatarUrl = avatarUrl;
+}
+
+const userList = {
+    users: [],
+
+    addUser: function(user) {
+        this.users.push(user);
+    },
+
+    login: function(email, password) {
+        return this.users.some(user => 
+            user.email === email && user.password === password
+        );
+    }
+};
+
+userList.addUser(new User("test@wp.pl", "1234", "avatar1.png"));
+userList.addUser(new User("raman@example.com", "abcd", "avatar2.png"));
+
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const pass = document.getElementById("password").value;
+
+    const result = userList.login(email, pass);
+
+    document.getElementById("result").innerText =
+        result ? "Logowanie udane" : "Błędne dane logowania";
+});
+</script>
+
+</body>
+</html>

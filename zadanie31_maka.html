@@ -1,0 +1,31 @@
+<html> 
+     <head>
+           <script type="text/javascript"> 
+                 var wiezowiec = { 
+   ile_pietr: 32, 
+   wysota: 100, 
+   rating: 5, 
+   pokaz: function () 
+     { 
+        document.write(this.ile_pietr + ' pietr,  wysota: ' + this.wysota, ', rating: ' + this.rating + ' stars') 
+     } 
+  } 
+  wiezowiec.pokaz(); 
+  wiezowiec.top=30; 
+  wiezowiec.wypisz=function() {alert('top: ' + this.top + ' in the world')} 
+  wiezowiec.wypisz(); 
+            </script> 
+     </head> 
+<body> 
+ <br> 
+   Programowanie obiektowe. <br> 
+     Obiekt  to  wiezowiec<br> 
+     Pola: ile_pietr, wysota, rating<br> 
+     Pietr 32<br> 
+     wysota 100<br> 
+     rating 5<br> 
+     metoda:  pokaz<br> 
+     nowe pole to top <br> 
+     nowa metoda to wypisz();<br> 
+</body> 
+</html> 
