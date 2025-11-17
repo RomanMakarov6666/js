@@ -34,23 +34,18 @@ function User(email, password, avatarUrl) {
     this.avatarUrl = avatarUrl;
 }
 
-// 1) Konstruktor UserView
 function UserView(user) {
     this.user = user;
 
-    // utwórz element li
     const li = document.createElement("li");
 
-    // avatar
     const img = document.createElement("img");
     img.src = user.avatarUrl;
 
-    // link mailto
     const link = document.createElement("a");
     link.href = "mailto:" + user.email;
     link.innerText = user.email;
 
-    // składanie
     li.appendChild(img);
     li.appendChild(link);
 
@@ -66,19 +61,25 @@ UserView.prototype.refresh = function() {
     link.innerText = this.user.email;
 };
 
-const u1 = new User("raman@example.com", "abcd", "avatar1.png");
-
+const u1 = new User("raman@example.com", "abcd", "avatar1.jpg");
 const view1 = new UserView(u1);
-
 document.getElementById("userList").appendChild(view1.dom);
 
-setTimeout(function(){
-    u1.email = "nowy_email@example.com";
-    u1.avatarUrl = "avatar2.png";
-    view1.refresh();
-}, 3000);
+const usersData = [
+    {email:"romanmakarov@gmail.com", avatar:"avatar1.jpg"},
+    {email:"kenblock@example.com", avatar:"avatar2.jpg"}
+  ];
 
+let index = 0;
+
+setInterval(function() {
+    index = (index + 1) % usersData.length;
+    u1.email = usersData[index].email;
+    u1.avatarUrl = usersData[index].avatar;
+    view1.refresh();
+}, 5000);
 </script>
+
 
 </body>
 </html>
