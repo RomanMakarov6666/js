@@ -1,0 +1,137 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24"> 
+        <!DOCTYPE html> 
+<html lang="pl"> 
+<head> 
+ <title>Zadanie JavaScript</title> 
+ <meta charset="utf-8"> 
+ <style> 
+  h1 { text-transform: uppercase; } 
+  
+ </style> 
+</head> 
+<body> 
+ 
+ <h1>Proste działania</h1> 
+ <h2>Raman Makarau 2P</h2>
+ <label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a"> 
+ <br><br> 
+ <label for="b">Podaj drugą liczbę:</label> <input type="number" id="b"> 
+ <br><br> 
+ <input type="button" value="DODAWANIE" onclick="suma_mak()"> 
+ <input type="button" value="ODEJMOWANIE" onclick="roznica_mak()"> 
+ <input type="button" value="MNOŻENIE" onclick="iloczyn_mak()"> 
+ <input type="button" value="DZIELENIE" onclick="iloraz_mak()">
+  <input type="button" value="TEORIA-Makarau" onclick="teoria_mak()"> 
+ 
+ <div id="wynik" style="margin-top:20px;"></div> 
+ <script> 
+  function suma_mak() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+   document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    var suma = a + b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma; 
+   } 
+   //alert(a); 
+   //console.log(a); 
+  } 
+  function roznica_mak() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    var roznica = a - b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica; 
+   } 
+  }   
+  function iloczyn_mak() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    var iloczyn = a * b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn; 
+   } 
+  }   
+ 
+  function iloraz_mak() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    if (b == 0) 
+    { 
+  document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero."; 
+    } 
+    else 
+    {         
+     var iloraz = a / b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz; 
+    } 
+   } 
+  }
+  
+  function teoria_mak() 
+{ 
+document.write("<font color=green size=4>pierwsza linia teorii</font>"+"<br>"); 
+document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>label for=</font>"+"<font color=red size=4>&quot;a&quot;&gt;Podaj pierwszą liczbę:&lt;/label&gt;&lt;input type=&quot;number&quot;id=&quot;a&quot;&gt;</font>"); 
+document.write("<br>"); 
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>"); 
+document.write("<font color=red size=4>wykonanie numerycznego pola formularza z opisem 'Podaj pierwszą liczbę:' a nazwa pola to 'a' </font>"+"<br>");
+////////////////////////////
+document.write("<font color=green size=4>druga linia teorii</font>"+"<br>"); 
+document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4> input type=</font>"+"<font color=red size=4>&quot;</font>" + "<font color=red size=4>button</font>" + "<font color=red size=4>&quot;</font>" + "<font color=red size=4>&gt;</font>"); 
+document.write("<font color=red size=4> value=</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>DODAWANIE&quot;</font>" + "<font color=red size=4></font>"); 
+document.write("<font color=red size=4>onclick=</font>"+"<font color=red size=4>&quot;</font>"+ "<font color=red size=4>suma()</font>" +"<font color=red size=4>&quot;&gt</font>" + "<br>"); 
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>"); 
+document.write("<font color=red size=4>Wykonanie przycisku o nazwie DODAWANIE i z takim samym napisem, kliknięcie myszką uruchamia funkcję suma().  </font>"+"<br>"); 
+/////////////////////////////
+document.write("<font color=green size=4>trzecia linia teorii</font>"+"<br>"); 
+document.write("<font color=red size=4>var a = document.getElementById(&quota&quot).value;</font>" + "<br>"); //var a = document.getElementById("a").value; 
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>"); 
+document.write("<font color=red size=4>wpisanie do zmiennej &quota&quot wartości z elementu o Id &quota&quot  (zbieżność nazw) </font>"+"<br>"); 
+////////////////////////////
+document.write("<font color=green size=4>czwarta linia teorii</font>"+"<br>");
+document.write("<font color=red size=4>if (a == &quot&quot || b == &quot&quot)</font>" + "<br>"); //if (a == "" || b == "")
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>"); 
+document.write("<font color=red size=4>sprawdzenie czy pola &qouta&quot  lub  &quotb&quot są puste. </font>"+"<br>"); 
+////////////////////////////
+document.write("<font color=green size=4>piata linia teorii</font>"+"<br>"); 
+document.write("<font color=red size=4> document.getElementById(&quotwynik&quot).innerHtml = &quotWynik działania wynosi: &quot + suma;</font>" + "<br>"); // document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>"); 
+document.write("<font color=red size=4>pobranie wartości Id  o nazwie <b>&quotwynik&quot</b> i wyprowadzenie w oknie przeglądarki tekstu  &quotWynik działania wynosi: &quot   oraz wartości zmiennej <b>suma</b>; </font>"+"<br>"); 
+////////////////////////////
+} 
+ </script> 
+</body> 
+</html> 
+      </textarea> 
+    </body> 
+</html> 
