@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+<head>  
+   <meta charset="utf-8"> 
+    <title>  Przykład użycia pętli </title> 
+  
+</head>  
+<body>
+   <p style="font-size: 2cm; color: red;">Raman Makarau</p>
+   <p style="font-size:  5mm;color: blue;">Przykład użycia pętli</p>
+    <script language="JavaScript"> 
+   var num=prompt("num=",""); 
+   var num_mak=parseFloat(num);
+   var str = prompt("inicials=", "");
+   for ( var i=0; i<num_mak; i++) 
+    { 
+       for ( var k=1; k<=i*(str.length+4)*2; k++) 
+        { 
+           document.write("&nbsp");     
+         } 
+         document.write((i+1)+"_"+str+"_"+(i+1)+"<br>"); 
+     } 
+  </script> 
+</body>  
+</html> 

@@ -1,0 +1,36 @@
+<html> 
+   <body> 
+     <textarea cols="90" rows="24" readonly> 
+<!DOCTYPE html> 
+<html lang="pl"> 
+<head>  
+   <meta charset="utf-8"> 
+    <title>  Przykład użycia pętli </title> 
+  
+</head>  
+<body>
+   <p style="font-size: 2cm; color: red;">Raman Makarau</p>
+   <p style="font-size:  5mm;color: blue;">Przykład użycia pętli</p>
+    <script language="JavaScript"> 
+    var l1_t_mak; var l2_t_mak; var pocz_mak=10; var tekst_mak = "Makarau";
+    var i = pocz_mak; 
+    do{
+        var a=prompt("L1="); 
+        var b=prompt("L2="); 
+        l1_t_mak=parseFloat(a); 
+        l2_t_mak=parseFloat(b); 
+    }while(l1_t_mak<20&&l1_t_mak>60&&l2_t_mak<20&&l2_t_mak>60);
+    if(l1_t_mak>l2_t_mak){
+        while(i<100) {document.write("<p style=\"font-size:"+i+"px; color: black;\"><br>"+tekst_mak+"<br></p>");i+=5;}
+    } 
+    if(l1_t_mak<l2_t_mak){
+        while(i>0) {document.write("<p style=\"font-size:"+i+"px; color: black;\"><br>"+tekst_mak+"<br></p>"); i-=5;}
+    } 
+    if(l1_t_mak==l2_t_mak) document.write("<p style=\"font-size:"+pocz_mak+"px; color: black;\"><br>"+tekst_mak+"<br></p>");
+    
+  </script> 
+</body>  
+</html> 
+      </textarea> 
+    </body> 
+</html> 
