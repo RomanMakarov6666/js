@@ -5,13 +5,21 @@
                body{
                     background-color: darkslategrey;
                }
+               #santa {
+                position: absolute;
+                width: 120px;
+                transition: transform 1s linear;
+                pointer-events: none;
+                }
+
             </style>
- 
+            
           <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-
+<script src="Js_effects/snow.js"></script>
+<script src="Js_effects/santa.js"></script>
 <script>
 function okno_zamknij() { window.close(); }
 
@@ -27,7 +35,6 @@ for(let i=1;i<=59;i++){
 
 </head>
 <body>
-
 <p style="font-size: 35px;color: red;">Szkielet zaliczeniowy JavaScript Raman Makarau 2P</p>
 <video autoplay muted playsinline style="float: right;border-radius: 10px;">
   <source src="Images/max.mp4" type="video/mp4">
