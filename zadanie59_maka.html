@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+<head>  
+   <meta charset="utf-8"> 
+    <title>  Przykład użycia pętli </title> 
+  
+</head>  
+<body style="font-family: 'Courier New', Courier, monospace;">
+    <script language="JavaScript"> 
+   var R = prompt("r=");
+var r = parseFloat(R);
+var start = Math.trunc(-r - 1);
+var end = Math.trunc(r + 1);
+var points = 0;
+for (var y = start; y <= end; y++) {
+    for (var x = start; x <= end; x++) {
+        if (x * x + y * y <= r * r) points++;
+    }
+}
+
+document.write("Points: " + points + "; R: " + r);
+
+  </script> 
+</body>  
+</html> 
