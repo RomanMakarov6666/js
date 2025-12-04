@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   const santa = document.createElement("img");
-  santa.src = "/Images/santa.png";
+  santa.src = "./Images/santa.png";
   santa.style.position = "absolute";
   santa.style.width = "220px";
   santa.style.left = "100px";
@@ -45,3 +45,4 @@ window.addEventListener("DOMContentLoaded", () => {
 
   animate();
 });
+
